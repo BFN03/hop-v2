@@ -2,14 +2,15 @@ import { empty, el } from './elements.js';
 
 // products
 export function renderProduct(product) {
-  const productDiv = el('div', {}, 
+  const productDiv = el('a', { href: `product.html?id=${product.id}` },
+  el('div', {}, 
     el('img', { src: product.image, alt: product.title }),
     el('h3', {}, product.title),
     el('p', {}, product.category_title),
     el('h2', {}, `${product.price} kr.-`)
-  );
+   )
+ );
   
-
   return productDiv;
 }
 
@@ -29,6 +30,9 @@ export function renderFrontpage(items) {
       const productDiv = renderProduct(product);
       productRow.appendChild(productDiv);
     });
+    mainContainer.addEventListener('click', () => {
+      navigateToProductPage(product.id);
+    });
 
     mainContainer.appendChild(productRow);
   } else {
@@ -37,6 +41,12 @@ export function renderFrontpage(items) {
 
   containerDiv.appendChild(mainContainer);
 }
+
+function navigateToProductPage(productId) {
+    
+  window.location.href = `product.html?id=${productId}`;
+}
+
 export async function fetchAndRenderProducts() {
   try {
     const response = await fetch(
