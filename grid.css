@@ -1,23 +1,24 @@
 @media (max-width: 767px) {
-    .main-container {
-      padding: 10px;
-    }
-  
-    .product-row {
-      flex-direction: column;
-    }
+  .main-container {
+    padding: 10px;
   }
-  @media (max-width: 767px) {
-    nav {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .box, .box2 {
-      width: 100%;
-    }
-  
-    ul {
-      flex-direction: column;
-    }
+
+  .product-row {
+    flex-direction: column;
   }
+}
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .box,
+  .box2 {
+    width: 100%;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+}
