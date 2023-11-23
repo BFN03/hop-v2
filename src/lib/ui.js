@@ -1,15 +1,28 @@
-import { empty } from './elements.js'
+import { empty } from './elements.js';
 
 // products
 export function renderProduct(product) {
-    const productDiv = document.createElement('div');
-    productDiv.innerHTML = `
+  const productDiv = document.createElement('div');
+  productDiv.innerHTML = `
       <img src="${product.image}" alt="${product.title}">
       <h2>${product.title}</h2>
       <p>${product.category_title}</p>
       <p>Price: $${product.price}</p>
     `;
-    return productDiv;
+  return productDiv;
+}
+
+export function renderFrontpage(items) {
+  const productListDiv = document.getElementById('productList');
+  empty(productListDiv);
+
+  if (Array.isArray(items)) {
+    items.forEach((product) => {
+      const productDiv = renderProduct(product);
+      productListDiv.appendChild(productDiv);
+    });
+  } else {
+    console.error('Items is not an array:', items);
   }
  
   
@@ -24,8 +37,8 @@ export function renderProduct(product) {
       });
     } else {
       console.error('Items er ekki fylki:', items);
-    }
-  }
+
+
   
   export async function fetchAndRenderProducts() {
     try {
@@ -82,3 +95,4 @@ export function renderCategory(category) {
 
 
   
+
