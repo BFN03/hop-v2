@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  nav {
+    background-color: #333; /* Adjust the background color as needed */
+    color: white; /* Adjust the text color as needed */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .boxes {
+    display: flex;
+    align-items: center;
+  }
+  
+  .box {
+    margin-right: 20px; /* Adjust the margin as needed */
+  }
+  
+  .box h1 {
+    padding-left: 26px;
+  }
+  
+  .box2 {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .box2 ul {
+  
+    list-style-type: none;
+  
+  }
+  
+  
+  
+  .box2 li {
+    margin-right: 15px; /* Adjust the margin as needed */
+    margin-top: 8px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white; /* Adjust the link color as needed */
+  }
+  
+  h1 {
+    margin: 0; /* Remove default margin for h1 */
+  }
+  
