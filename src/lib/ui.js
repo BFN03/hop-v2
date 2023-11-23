@@ -15,9 +15,7 @@ export function renderProduct(product) {
     const productListDiv = document.getElementById('productList');
     empty(productListDiv);
   
-    // Check if 'items' is an array before iterating over it
     if (Array.isArray(items)) {
-      // Iterate through the items and append HTML elements for each product to the productListDiv
       items.forEach(product => {
         const productDiv = renderProduct(product);
         productListDiv.appendChild(productDiv);
@@ -32,14 +30,13 @@ export function renderProduct(product) {
       const response = await fetch('https://vef1-2023-h2-api-791d754dda5b.herokuapp.com/products?limit=6');
       const data = await response.json();
   
-      // Ensure that 'items' is an array before rendering
       if (Array.isArray(data.items)) {
         renderFrontpage(data.items);
       } else {
-        console.error('Invalid or empty data received from the API:', data);
+        console.error('Ólöglegt eða tómt gagnasett tekið frá API:', data);
       }
     } catch (error) {
-      console.error('Error fetching or displaying data:', error);
+      console.error('Villa kom upp við að sækja gagnasett:', error);
     }
   }
   
