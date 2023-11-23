@@ -98,22 +98,6 @@ a {
   color: white; /* Adjust the link color as needed */
 }
 
-@media (max-width: 767px) {
-  nav {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .box, .box2 {
-    width: 100%;
-  }
-
-  ul {
-    flex-direction: column;
-  }
-}
-
-
 .product-list {
   display: flex;
   flex-wrap: wrap;
@@ -149,15 +133,7 @@ img {
   justify-content: space-between;
   padding-top: 1rem;
 }
-@media (max-width: 767px) {
-  .main-container {
-    padding: 10px;
-  }
 
-  .product-row {
-    flex-direction: column;
-  }
-}
 h3 {
   margin-top: 8px;
   margin-bottom: 0px;
