@@ -4,29 +4,39 @@ import { empty, el } from './elements.js';
 export function renderProduct(product) {
   const productDiv = el('div', {}, 
     el('img', { src: product.image, alt: product.title }),
-    el('h2', {}, product.title),
+    el('h3', {}, product.title),
     el('p', {}, product.category_title),
-    el('p', {}, `${product.price} kr.-`)
+    el('h2', {}, `${product.price} kr.-`)
   );
+  
 
   return productDiv;
 }
 
 export function renderFrontpage(items) {
-  
-  const productListDiv = document.getElementById('productList');
-  empty(productListDiv);
+  const containerDiv = document.getElementById('productList');
+  empty(containerDiv);
+
+  const mainContainer = el('div', { class: 'main-container' });
+
+  const heading = el('h1', {}, 'Nýjar vörur');
+  mainContainer.appendChild(heading);
 
   if (Array.isArray(items)) {
+    const productRow = el('div', { class: 'product-row' });
+
     items.forEach((product) => {
       const productDiv = renderProduct(product);
-      productListDiv.appendChild(productDiv);
+      productRow.appendChild(productDiv);
     });
+
+    mainContainer.appendChild(productRow);
   } else {
     console.error('Items er ekki fylki:', items);
   }
-}
 
+  containerDiv.appendChild(mainContainer);
+}
 export async function fetchAndRenderProducts() {
   try {
     const response = await fetch(
@@ -46,10 +56,8 @@ export async function fetchAndRenderProducts() {
 
 // categories
 export function renderCategory(category) {
-  const categoryDiv = document.createElement('div');
-  categoryDiv.innerHTML = `
-      <h1>${category.category_title}</h1>
-    `;
+  const categoryDiv = el('div', {}, 
+  el('h1', {}, category.category_title));
   return categoryDiv;
 }
 

@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    max-width: 100%;
   }
   
   .boxes {
@@ -35,14 +35,8 @@ body {
   }
   
   .box2 ul {
-  
     list-style-type: none;
-    
-
-  
   }
-  
-  
   
   .box2 li {
     margin-right: 15px;
@@ -57,13 +51,8 @@ body {
   
   h1 {
     margin: 0; 
-    font-size: 48px;
+    font-size: 40px;
   }
-  
-=======
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
 
 nav {
   background-color: #333; /* Adjust the background color as needed */
@@ -72,12 +61,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-h1 {
-  margin: 0; /* Remove default margin for h1 */
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .boxes {
@@ -114,3 +98,78 @@ a {
   color: white; /* Adjust the link color as needed */
 }
 
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .box, .box2 {
+    width: 100%;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+}
+
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: space-between;
+  padding-top: 3rem;
+}
+img {
+  height: 250px;
+  width: 400px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: space-between;
+  padding-top: 3rem;
+}
+
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+@media (max-width: 767px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  .product-row {
+    flex-direction: column;
+  }
+}
+h3 {
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+p {
+  margin-top: 0px;
+  
+}
+h2 {
+  display: flex;
+  justify-content: right;
+  font-weight: normal;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(57, 57, 57);
+  
+}
