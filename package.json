@@ -11,6 +11,7 @@
     "sassllint": "npx stylelint **/*.scss",
     "sass": "sass styles.scss styles.css",
     "sass-watch": "sass --watch *.scss styles.css"
+    
   },
   "keywords": [],
   "author": "",
