@@ -1,17 +1,18 @@
-import { empty } from './elements.js';
+import { empty, el } from './elements.js';
 
 export function renderProduct(product) {
-  const productDiv = document.createElement('div');
-  productDiv.innerHTML = `
-      <img src="${product.image}" alt="${product.title}">
-      <h2>${product.title}</h2>
-      <p>${product.category_title}</p>
-      <p>Price: $${product.price}</p>
-    `;
+  const productDiv = el('div', {}, 
+    el('img', { src: product.image, alt: product.title }),
+    el('h2', {}, product.title),
+    el('p', {}, product.category_title),
+    el('p', {}, `${product.price} kr.-`)
+  );
+
   return productDiv;
 }
 
 export function renderFrontpage(items) {
+  
   const productListDiv = document.getElementById('productList');
   empty(productListDiv);
 
@@ -21,7 +22,7 @@ export function renderFrontpage(items) {
       productListDiv.appendChild(productDiv);
     });
   } else {
-    console.error('Items is not an array:', items);
+    console.error('Items er ekki fylki:', items);
   }
 }
 
