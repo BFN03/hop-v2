@@ -1,56 +1,103 @@
 body {
-  margin: 0;
-  font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  nav {
+    background-color: #333; 
+    color: white; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+  }
+  
+  .boxes {
+    display: flex;
+    align-items: center;
+  }
+  
+  .box {
+    margin-right: 20px;
+  }
+  
+  .box h1 {
+    padding-left: 26px;
+  }
+  
+  .box2 {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .box2 ul {
+    list-style-type: none;
+  }
+  
+  .box2 li {
+    margin-right: 15px;
+    margin-top: 8px;
+    display: inline-block;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white; 
+  }
+  
+  h1 {
+    margin: 0; 
+    font-size: 40px;
+  }
+
+img {
+  height: 250px;
+  width: 400px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  padding-top: 2rem;
 }
 
-nav {
-  background-color: #333;
-  color: white;
-  padding: 10px;
+.main-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
   justify-content: space-between;
-  align-items: center;
+  padding-top: 3rem;
 }
 
-h1 {
-  margin: 0;
-  font-size: 48px;
-}
-
-.boxes {
+.product-row {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  padding-top: 1rem;
 }
 
-.box {
-  margin-right: 20px;
-}
-
-.box h1 {
-  padding-left: 26px;
-}
-
-.box2 {
-  display: flex;
-  list-style-type: none;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-}
-
-.box2 ul {
-  list-style-type: none;
-}
-
-.box2 li {
-  margin-right: 15px;
+h3 {
   margin-top: 8px;
-  display: inline-block;
+  margin-bottom: 0px;
+  color: black;
 }
-
-a {
-  text-decoration: none;
-  color: white;
+p {
+  margin-top: 0px;
+  color:black;
+}
+h2 {
+  display: flex;
+  justify-content: right;
+  font-weight: normal;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(57, 57, 57);
+  
 }
 
 /*# sourceMappingURL=styles.css.map */
+
