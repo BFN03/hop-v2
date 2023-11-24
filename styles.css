@@ -6,7 +6,7 @@ body {
   nav {
     background-color: #333; 
     color: white; 
-    padding: 10px;
+    padding: 0.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,11 +19,11 @@ body {
   }
   
   .box {
-    margin-right: 20px;
+    margin-right: 1.2rem;
   }
   
   .box h1 {
-    padding-left: 26px;
+    padding-left: 1.9rem;
   }
   
   .box2 {
@@ -39,24 +39,28 @@ body {
   }
   
   .box2 li {
-    margin-right: 15px;
-    margin-top: 0px;
+    margin-right: 1rem;
+    margin-top: 0rem;
     display: inline-block;
   }
   
-  a {
+  nav a {
     text-decoration: none;
-   color: white;
+    color: white;
+  }
+  a {
+    color:black;
+    text-decoration: none;
   }
   
-  h1 {
+  nav h1 {
     margin: 0; 
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
 img {
-  height: 250px;
-  width: 400px;
+  height: 15.6rem;
+  width: 25rem;
   max-width: 100%;
   object-fit: cover;
   object-position: center;
@@ -67,8 +71,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 3.1rem;
+  padding-right: 3.1rem;
   justify-content: space-between;
   padding-top: 3rem;
 }
@@ -82,12 +86,12 @@ img {
 }
 
 h3 {
-  margin-top: 8px;
-  margin-bottom: 0px;
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
   color: black;
 }
 p {
-  margin-top: 0px;
+  margin-top: 0rem;
   color:black;
 }
 h2 {
@@ -97,6 +101,52 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(57, 57, 57);
 }
+.main-container h1 {
+  font-size: 2rem;
+}
 
+.category-item {
+  border: 0.06rem solid #000;
+  padding: 0.6rem;
+  margin: 0.3rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+#categoryList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+  gap: 0.6rem; 
+  padding: 2rem;
+}
+
+#categoryTitle {
+  text-align: start;
+  font-size: 1.5rem;
+  padding-top: 2.1rem;
+  padding-left: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1.2rem; /* Adjust the margin-top as needed */
+}
+
+button:hover {
+  background-color: #333; /* Darken the background color on hover if desired */
+}
 /*# sourceMappingURL=styles.css.map */
 
