@@ -1,6 +1,6 @@
 import { empty, el } from './elements.js';
 
-// products
+
 export function renderProduct(product) {
   const productDiv = el(
     'a',
@@ -18,6 +18,12 @@ export function renderProduct(product) {
   return productDiv;
 }
 
+
+
+function navigateToProductPage(productId) {
+  window.location.href = `product.html?id=${productId}`;
+}
+
 export function renderFrontpage(items) {
   const containerDiv = document.getElementById('productList');
   empty(containerDiv);
@@ -32,10 +38,11 @@ export function renderFrontpage(items) {
 
     items.forEach((product) => {
       const productDiv = renderProduct(product);
+      productDiv.addEventListener('click', () => {
+        navigateToProductPage(product.id);
+      });
+
       productRow.appendChild(productDiv);
-    });
-    mainContainer.addEventListener('click', () => {
-      navigateToProductPage(product.id);
     });
 
     mainContainer.appendChild(productRow);
@@ -53,6 +60,7 @@ export function renderFrontpage(items) {
   containerDiv.appendChild(mainContainer);
 }
 
+
 function navigateToCategoryPage() {
   window.location.href = 'category.html';
 
@@ -60,6 +68,7 @@ function navigateToProductPage(productId) {
   window.location.href = `product.html?id=${productId}`;
 }
 }
+
 
 export async function fetchAndRenderProducts() {
   try {
@@ -79,7 +88,9 @@ export async function fetchAndRenderProducts() {
 }
 
 
+
 // categories
+
 export function renderCategory(category) {
   const categoryLink = el(
     'a',
@@ -87,12 +98,14 @@ export function renderCategory(category) {
     el('h1', { class: 'flokkar' }, category.title),
   );
 
+
   const mainContainer = el('div', { class: 'main-container' });
 
   const heading = el('h1', {}, 'Skoðaðu vöruflokkana okkar');
   mainContainer.appendChild(heading);
   
   const categoryDiv = el('div', { class: 'category-item'}, categoryLink);
+
 
   return categoryDiv;
 }
@@ -108,9 +121,11 @@ export function renderCategorypage(items) {
   empty(categoryListDiv);
 
   if (Array.isArray(items)) {
+
     items.forEach((category) => {
       const categoryDiv = renderCategory(category);
       categoryListDiv.appendChild(categoryDiv);
+
     });
   } else {
     console.error('Items er ekki fylki:', items);
@@ -133,4 +148,57 @@ export async function fetchAndRenderCategories() {
     console.error('Villa kom upp við að sækja gagnasett:', error);
   }
 }
+
+// síða fyrir hvern flokk
+
+function navigateToCategoryPage(categoryId) {
+  window.location.href = `category.html?id=${categoryId}`;
+}
+
+export function renderCategoriesPage(items) {
+  const containerDiv = document.getElementById('CategoryPage');
+  empty(containerDiv);
+
+  const mainContainer = el('div', { class: 'main-container' });
+
+  const heading = el('h1', {}, 'Health');
+  mainContainer.appendChild(heading);
+
+  if (Array.isArray(items)) {
+    const productRow = el('div', { class: 'product-row' });
+
+    items.forEach((product) => {
+      const productDiv = renderProduct(product);
+      productDiv.addEventListener('click', () => {
+        navigateToCategoryPage(product.id);
+      });
+
+      productRow.appendChild(productDiv);
+    });
+
+    mainContainer.appendChild(productRow);
+  } else {
+    console.error('Items er ekki fylki:', items);
+  }
+
+  containerDiv.appendChild(mainContainer);
+}
+
+export async function fetchAndRenderCategoryPage() {
+  try {
+    const response = await fetch(
+      'https://vef1-2023-h2-api-791d754dda5b.herokuapp.com/products?category=12',
+    );
+    const data = await response.json();
+
+    if (Array.isArray(data.items)) {
+      renderCategoriesPage(data.items);
+    } else {
+      console.error('Ólöglegt eða tómt gagnasett tekið frá API:', data);
+    }
+  } catch (error) {
+    console.error('Villa kom upp við að sækja gagnasett:', error);
+  }
+}
+
 
