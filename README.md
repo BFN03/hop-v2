@@ -30,6 +30,8 @@ inniheldur öll þau gögn til þess að keyra síðu í neytenda umhverfi
 Hinrik Haraldsson, Björn Freyr Nielsen,Hjalti Freyr Magnússon
 ### HI netföng 
 hih67@hi.is, bfn1@hi.is, hfm6@hi.is
+### GitHub notendanöfn
+HinrikHar, BFN03, HjaltiFr
 
 
 
