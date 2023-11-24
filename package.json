@@ -8,7 +8,7 @@
     "lint": "eslint ./src",
     "prettier": "prettier --write .",
     "csslint": "npx stylelint **/*.css",
-    "sassllint": "npx stylelint **/*.scss",
+    "sasslint": "npx stylelint **/*.scss",
     "sass": "sass styles.scss styles.css",
     "sass-watch": "sass --watch *.scss styles.css",
     "copy:html": "cpy ./*.html ./build/",

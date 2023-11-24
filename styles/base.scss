@@ -6,7 +6,7 @@ body {
 nav {
   background-color: #333; 
   color: white; 
-  padding: 10px;
+  padding: 0.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,11 +19,11 @@ nav {
 }
 
 .box {
-  margin-right: 20px;
+  margin-right: 1.2rem;
 }
 
 .box h1 {
-  padding-left: 26px;
+  padding-left: 1.9rem;
 }
 
 .box2 {
@@ -39,24 +39,24 @@ nav {
 }
 
 .box2 li {
-  margin-right: 15px;
-  margin-top: 0px;
+  margin-right: 1rem;
+  margin-top: 0.01rem;
   display: inline-block;
 }
 
 a {
+  color:black;
   text-decoration: none;
- color: white;
 }
 
-h1 {
-  margin: 0; 
-  font-size: 40px;
+nav a {
+  text-decoration: none;
+  color: white;
 }
 
 img {
-height: 250px;
-width: 400px;
+height: 15.6rem;
+width: 25rem;
 max-width: 100%;
 object-fit: cover;
 object-position: center;
@@ -66,9 +66,9 @@ padding-top: 2rem;
 .main-container {
 display: flex;
 flex-wrap: wrap;
-justify-content: center;
-padding-left: 50px;
-padding-right: 50px;
+align-items: center;
+padding-left: 3.1rem;
+padding-right: 3.1rem;
 justify-content: space-between;
 padding-top: 3rem;
 }
@@ -76,26 +76,70 @@ padding-top: 3rem;
 .product-row {
 display: flex;
 flex-wrap: wrap;
-justify-content: center;
+align-items: center;
 justify-content: space-between;
 padding-top: 1rem;
 }
 
 h3 {
-margin-top: 8px;
-margin-bottom: 0px;
+margin-top: 0.5rem;
+margin-bottom: 0.01rem;
 color: black;
 }
+
 p {
-margin-top: 0px;
+margin-top: 0.01rem;
 color:black;
 }
+
 h2 {
 display: flex;
 justify-content: right;
 font-weight: normal;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
-color: rgb(57, 57, 57);
+color: black;
 }
 
+.main-container h1 {
+font-size: 2rem;
+}
 
+.category-item {
+border: 0.06rem solid #000;
+padding: 0.6rem;
+margin: 0.3rem;
+text-align: center;
+border-radius: 0.4rem;
+padding-top: 1rem;
+padding-bottom: 1rem;
+font-size: 2.5rem;
+}
+
+#category-list {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 0.6rem; 
+padding: 2rem;
+}
+
+#category-title {
+text-align: start;
+padding-top: 2.1rem;
+padding-left: 2.5rem;
+font-size: 1.8rem;
+font-weight: 700;
+}
+
+button {
+background-color: black;
+color: white;
+border: none;
+padding: 0.6rem 2rem;
+border-radius: 0.3rem;
+cursor: pointer;
+margin-top: 1.2rem;
+}
+
+button:hover {
+background-color: #333;
+}
