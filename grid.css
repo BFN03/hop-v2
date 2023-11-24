@@ -1,4 +1,5 @@
 @media (max-width: 767px) {
+
     .main-container {
       padding: 0.6rem;
     }
@@ -7,20 +8,26 @@
       flex-direction: column;
     }
   }
-  @media (max-width: 767px) {
-    nav {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .box, .box2 {
-      width: 100%;
-    }
-  
-    ul {
-      flex-direction: column;
-    }
+
+  .product-row {
+    flex-direction: column;
   }
+}
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .box,
+  .box2 {
+    width: 100%;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+}
   @media (min-width: 1699px) {
     .product-row {
       display: flex;
@@ -31,4 +38,4 @@
       grid-template-columns: 100%;
         }
       }
- 
+
