@@ -13,6 +13,9 @@
     "sass-watch": "sass --watch *.scss styles.css",
     "copy:html": "cpy ./*.html ./build/",
     "copy:js": "cpy ./src/**/*.js ./build/",
+    "copy:styles": "cpy ./styles/**/*.scss* ./build/",
+    "copy:css":"cpy ./*.css ./build",
+
     "build": "concurrently npm:copy:*"
   },
   "keywords": [],
