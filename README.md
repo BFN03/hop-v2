@@ -15,8 +15,8 @@ Sass skjölin í style möppuni eru imprtuð yfir í styles.scss
 grid.css inniheldur grid sem að gerir síðuna skalanlega
 
 ## JS:
-allt javascriptið okkar er í src möppu sem að inniheldur index.js skjal og lib möppu með : ui.js og elemnent.js sköl
-element.js inniheldur öll elemtin sem að við notuðum fyrir javascriptið
+allt javascriptið okkar er í src möppu sem að inniheldur index.js skjal og lib möppu með : ui.js og elemnent.js skjöl.
+Element.js inniheldur öll elementin sem að við notuðum fyrir javascriptið
 ui.js inniheldur föll sem að birta vörurnar og flokkana frá vefþjónustunni
 index.js sækir gögnin frá ui.js og elemnt.js til þess að birta gögnin á síðuna
 
