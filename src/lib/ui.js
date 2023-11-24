@@ -50,8 +50,25 @@ export function renderFrontpage(items) {
     console.error('Items er ekki fylki:', items);
   }
 
+  const laButton = el('button', {}, 'Skoða alla flokka');
+  laButton.addEventListener('click', () => {
+    navigateToCategoryPage();
+  });
+
+  mainContainer.appendChild(laButton);
+
   containerDiv.appendChild(mainContainer);
 }
+
+
+function navigateToCategoryPage() {
+  window.location.href = 'category.html';
+
+function navigateToProductPage(productId) {
+  window.location.href = `product.html?id=${productId}`;
+}
+}
+
 
 export async function fetchAndRenderProducts() {
   try {
@@ -70,6 +87,10 @@ export async function fetchAndRenderProducts() {
   }
 }
 
+
+
+// categories
+
 export function renderCategory(category) {
   const categoryLink = el(
     'a',
@@ -77,13 +98,26 @@ export function renderCategory(category) {
     el('h1', { class: 'flokkar' }, category.title),
   );
 
-  const categoryDiv = el('div', {}, categoryLink);
+
+  const mainContainer = el('div', { class: 'main-container' });
+
+  const heading = el('h1', {}, 'Skoðaðu vöruflokkana okkar');
+  mainContainer.appendChild(heading);
+  
+  const categoryDiv = el('div', { class: 'category-item'}, categoryLink);
+
 
   return categoryDiv;
 }
 
 export function renderCategorypage(items) {
   const categoryListDiv = document.getElementById('categoryList');
+  const categoryTitle = document.getElementById('categoryTitle');
+  
+  // Set the title text
+  categoryTitle.textContent = 'Skoðaðu vöruflokkana okkar';
+
+  // Clear the existing content
   empty(categoryListDiv);
 
   if (Array.isArray(items)) {
@@ -114,9 +148,6 @@ export async function fetchAndRenderCategories() {
     console.error('Villa kom upp við að sækja gagnasett:', error);
   }
 }
-
-
-
 
 // síða fyrir hvern flokk
 
@@ -169,4 +200,5 @@ export async function fetchAndRenderCategoryPage() {
     console.error('Villa kom upp við að sækja gagnasett:', error);
   }
 }
+
 
