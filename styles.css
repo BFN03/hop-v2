@@ -49,53 +49,7 @@ a {
   color: white;
 }
 
-h1 {
-  margin: 0;
-  font-size: 40px;
-}
 
-img {
-  height: 250px;
-  width: 400px;
-  max-width: 100%;
-  object-fit: cover;
-  object-position: center;
-  padding-top: 2rem;
-}
-
-.main-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-left: 50px;
-  padding-right: 50px;
-  justify-content: space-between;
-  padding-top: 3rem;
-}
-
-.product-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: space-between;
-  padding-top: 1rem;
-}
-
-h3 {
-  margin-top: 8px;
-  margin-bottom: 0px;
-  color: black;
-}
-p {
-  margin-top: 0px;
-  color: black;
-}
-h2 {
-  display: flex;
-  justify-content: right;
-  font-weight: normal;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(57, 57, 57);
 }
 
 /*# sourceMappingURL=styles.css.map */
