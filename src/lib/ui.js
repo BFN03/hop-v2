@@ -2,15 +2,19 @@ import { empty, el } from './elements.js';
 
 // products
 export function renderProduct(product) {
-  const productDiv = el('a', { href: `product.html?id=${product.id}` },
-  el('div', {}, 
-    el('img', { src: product.image, alt: product.title }),
-    el('h3', {}, product.title),
-    el('p', {}, product.category_title),
-    el('h2', {}, `${product.price} kr.-`)
-   )
- );
-  
+  const productDiv = el(
+    'a',
+    { href: `product.html?id=${product.id}` },
+    el(
+      'div',
+      {},
+      el('img', { src: product.image, alt: product.title }),
+      el('h3', {}, product.title),
+      el('p', {}, product.category_title),
+      el('h2', {}, `${product.price} kr.-`),
+    ),
+  );
+
   return productDiv;
 }
 
@@ -43,7 +47,6 @@ export function renderFrontpage(items) {
 }
 
 function navigateToProductPage(productId) {
-    
   window.location.href = `product.html?id=${productId}`;
 }
 
@@ -66,8 +69,7 @@ export async function fetchAndRenderProducts() {
 
 // categories
 export function renderCategory(category) {
-  const categoryDiv = el('div', {}, 
-  el('h1', {}, category.category_title));
+  const categoryDiv = el('div', {}, el('h1', {}, category.category_title));
   return categoryDiv;
 }
 

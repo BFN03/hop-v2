@@ -40,13 +40,13 @@ body {
   
   .box2 li {
     margin-right: 15px;
-    margin-top: 8px;
+    margin-top: 0px;
     display: inline-block;
   }
   
   a {
     text-decoration: none;
-    color: white; 
+   color: white;
   }
   
   h1 {
@@ -96,7 +96,6 @@ h2 {
   font-weight: normal;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(57, 57, 57);
-  
 }
 
 /*# sourceMappingURL=styles.css.map */
