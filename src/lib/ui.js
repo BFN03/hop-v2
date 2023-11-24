@@ -101,10 +101,8 @@ export function renderCategorypage(items) {
   const categoryListDiv = document.getElementById('categoryList');
   const categoryTitle = document.getElementById('categoryTitle');
   
-  // Set the title text
   categoryTitle.textContent = 'Skoðaðu vöruflokkana okkar';
 
-  // Clear the existing content
   empty(categoryListDiv);
 
   if (Array.isArray(items)) {

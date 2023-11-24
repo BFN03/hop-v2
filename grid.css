@@ -8,11 +8,7 @@
       flex-direction: column;
     }
   }
-
-  .product-row {
-    flex-direction: column;
-  }
-}
+  
 @media (max-width: 767px) {
   nav {
     flex-direction: column;
