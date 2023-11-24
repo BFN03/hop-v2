@@ -1,14 +1,14 @@
 # Hópverkefni 2
 
 ## **Script:** 
-        - npm install til þess að sækja alla npm pakka,
-        + npm run dev til þess að keyra síðu í developer umhverfi
-        - npm run lint til þess að keyra eslint 
-        + npm run csslint til þess að keyra stylelint fyrir css
-        - npm run sasslint til þess að keyra stylelint fyrir sass
-        + npm run prettier til þess að keyra prettier 
-        - npm run sass til þess að keyra sass
-        + npm run build til þess að búa til build möppu 
+         1 npm install til þess að sækja alla npm pakka,
+         2 npm run dev til þess að keyra síðu í developer umhverfi
+         3 npm run lint til þess að keyra eslint 
+         4 npm run csslint til þess að keyra stylelint fyrir css
+         5 npm run sasslint til þess að keyra stylelint fyrir sass
+         6 npm run prettier til þess að keyra prettier 
+         7  npm run sass til þess að keyra sass
+         8  npm run build til þess að búa til build möppu 
 
 ## **Útlit:**
 Sass skjölin í style möppuni eru imprtuð yfir í styles.scss
@@ -28,6 +28,7 @@ inniheldur öll þau gögn til þess að keyra síðu í neytenda umhverfi
 
 ## **Hópameðlimir:**
 Hinrik Haraldsson, Björn Freyr Nielsen,Hjalti Freyr Magnússon
+
 
 
    
